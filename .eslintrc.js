@@ -28,6 +28,8 @@ module.exports = {
         'import/extensions': ['error', 'always', { js: 'never', vue: 'never' }], // don't require .vue extension when importing
         'import/no-extraneous-dependencies': ['error', { optionalDependencies: ['test/unit/index.js'] }], // allow optionalDependencies
         'indent': ['error', 4], // 4 space indentation
+        'global-require': 0, // allow require statements
+        'no-unused-vars': isProduction ? 0 : 2, // warn for unused variables
         'no-debugger': isProduction ? 2 : 0 // allow debugger during development
     }
 }
